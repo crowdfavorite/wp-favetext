@@ -20,7 +20,7 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 function cfct_blog_settings_form() {
 	global $cfct_color_options;
 	$ajax_load_options = '';
-	$color_options = '';
+//	$color_options = '';
 	$lightbox_options = '';
 	$values = array(
 		'yes' => __('Yes', 'carrington-text'),
@@ -28,8 +28,8 @@ function cfct_blog_settings_form() {
 	);
 	$settings = array(
 		'cfct_ajax_load',
-		'cfct_custom_colors',
-		'cfct_custom_header_image',
+//		'cfct_custom_colors',
+//		'cfct_custom_header_image',
 		'cfct_lightbox',
 	);
 	foreach ($values as $k => $v) {
@@ -48,8 +48,8 @@ function cfct_blog_settings_form() {
 	if (intval($cfct_posts_per_archive_page) == 0) {
 		$cfct_posts_per_archive_page = 25;
 	}
-	cfct_get_option('cfct_custom_colors') == 'no' ? $colors_class = 'hidden' : $colors_class = '';
-	cfct_get_option('cfct_custom_header_image') == 'no' ? $header_image_class = 'hidden' : $header_image_class = '';
+// 	cfct_get_option('cfct_custom_colors') == 'no' ? $colors_class = 'hidden' : $colors_class = '';
+// 	cfct_get_option('cfct_custom_header_image') == 'no' ? $header_image_class = 'hidden' : $header_image_class = '';
 	$html = '
 		<table class="form-table">
 			<tbody>
@@ -99,6 +99,8 @@ function cfct_blog_settings_form() {
 				</tr>
 			</tbody>
 		</table>
+		';
+		$html = '
 		<table class="form-table">
 			<tbody>
 				<tr valign="top">
