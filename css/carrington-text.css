@@ -108,7 +108,7 @@ hr.divider {
 	margin-bottom: 40px;
 }
 #content div.entry-content {
-	color: #222;
+	color: #444;
 	margin-bottom: 10px;
 }
 #content h1.entry-title, #content h1.entry-title a, #content h1.entry-title a:visited {
@@ -119,7 +119,8 @@ hr.divider {
 #content h1.entry-title a:hover {
 	text-decoration: underline;
 }
-#content p.comments-link {
+#content .comments-link {
+	margin-bottom: 15px;
 }
 #content p.comments-link a, #content p.comments-link a:visited {
 	color: #333;
@@ -149,8 +150,9 @@ hr.divider {
 	visibility: visible;
 	float: right;
 }
-#content .comments-link {
-	margin-bottom: 15px;
+#content .comment-feed {
+	padding-top: 5px;
+	float: right;
 }
 #content a.comment-feed, #content a.comment-feed:visited {
 	color: #333;
@@ -172,10 +174,6 @@ hr.divider {
 	color: #666;
 	font-size: 11px;
 	font-style: normal;
-}
-#content .comment-feed {
-	padding-top: 5px;
-	float: right;
 }
 #content .comment-form-trackback, #content .comment-form-trackback a, #content .comment-form-trackback a:visited {
 	color: #555;
