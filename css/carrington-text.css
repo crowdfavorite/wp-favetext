@@ -43,6 +43,9 @@ input, textarea, select {
 	font-size: 13px;
 	padding: 4px;
 }
+a, a:visited {
+	color: #00f;
+}
 .clear {
 	clear: both;
 	display: block;
@@ -124,11 +127,11 @@ div.loading {
 	display: inline;
 	font-style: normal;
 }
-#content .entry-editlink {
+#content .entry-editlink, #content .comment-editlink {
 	visibility: hidden;
 	float: right;
 }
-#content .hentry:hover .entry-editlink {
+#content .hentry:hover .entry-editlink, #content .hentry:hover .comment-editlink {
 	visibility: visible;
 	float: right;
 }
@@ -165,7 +168,7 @@ div.loading {
 	padding: 0;
 }
 #content ol.comments li {
-	margin: 0 0 10px 0;
+	margin: 0 0 20px 0;
 	padding: 0;
 }
 #content .pagination-single {
@@ -176,6 +179,33 @@ div.loading {
 }
 #content .pagination-single .next {
 	float: right;
+}
+#content ol.comments .meta {
+	color: #777;
+	font-size: 11px;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 35px;
+	position: relative;
+}
+#content ol.comments .avatar {
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+#content ol.comments .meta a, #content ol.comments .meta a:visited {
+	color: #777;
+}
+#content ol.comments .meta .author {
+	color: #222;
+	font-size: 13px;
+	font-weight: bold;
+}
+#content ol.comments .meta .author a, #content ol.comments .meta .author a:visited {
+	color: #00f;
+}
+#content ol.comments .meta .comment-reply-link, #content ol.comments .meta .comment-reply-link:visited {
+	color: #333;
 }
 #sidebar h2 {
 	font-size: 18px;
