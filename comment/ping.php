@@ -20,14 +20,24 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 global $comment;
 
-comment_author_link();
+?>
+<div id="comment-<?php comment_ID(); ?>" <?php comment_class('hentry'); ?>>
+	<div class="entry-content comment-content">
+<?php 
 
 comment_text();
 
-comment_date();
+?>
+	</div><!--.entry-content-->
+	<div class="clear"></div>
+	<div class="meta">
 
-comment_time();
+<?php
 
-edit_comment_link(__('Edit This', 'carrington-text'), '', '');
+edit_comment_link(__('Edit', 'carrington-text'), '<span class="comment-editlink">', '</span>');
+
+echo '<span class="author">',comment_author_link(),'</span> &mdash; <a href="'.htmlspecialchars(get_comment_link( $comment->comment_ID )).'">',comment_date(),' @ ',comment_time(),'</a>';
 
 ?>
+	</div>
+</div>

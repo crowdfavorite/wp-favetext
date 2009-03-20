@@ -88,6 +88,12 @@ div.loading {
 #blog-description {
 	color: #999;
 }
+#content .notification {
+	background: #ddd;
+	color: #444;
+	font-size: 11px;
+	padding: 7px;
+}
 #content div.hentry.post {
 	margin-bottom: 40px;
 }
@@ -95,11 +101,6 @@ div.loading {
 	color: #222;
 	margin-bottom: 10px;
 }
-/*
-#content div.entry-content h2 {
-	margin: 5px 0 5px;
-}
-*/
 #content h1.entry-title, #content h1.entry-title a, #content h1.entry-title a:visited {
 	color: #444;
 	margin-bottom: 10px;
@@ -118,6 +119,9 @@ div.loading {
 	font-size: 11px;
 	margin-bottom: 8px;
 	margin-top: -5px;
+}
+#content .page .by-line {
+	margin-top: 30px;
 }
 #content .by-line a, #content .by-line a:visited, 
 #content .filed a, #content .filed a:visited {
@@ -154,6 +158,11 @@ div.loading {
 	font-size: 11px;
 	font-style: normal;
 }
+#content .some-html-is-ok {
+	color: #666;
+	font-size: 11px;
+	font-style: normal;
+}
 #content .comment-feed {
 	padding-top: 5px;
 	float: right;
@@ -163,30 +172,54 @@ div.loading {
 	font-size: 11px;
 }
 #content ol.comments {
-	list-style: none;
 	margin: 0 0 20px 0;
 	padding: 0;
 }
 #content ol.comments li {
-	margin: 0 0 20px 0;
+	list-style: none;
+	margin: 0;
 	padding: 0;
 }
-#content .pagination-single {
+#content ol.comments .depth-2 {
+	margin-left: 20px;
+}
+#content ol.comments .depth-3 {
+	margin-left: 40px;
+}
+#content ol.comments .depth-4 {
+	margin-left: 60px;
+}
+#content ol.comments .depth-5 {
+	margin-left: 80px;
+}
+#content .pagination {
 	margin: 40px 0;
 }
-#content .pagination-single a, #content .pagination-single a:visited {
+#content .pagination a, #content .pagination a:visited {
 	color: #333;
 }
-#content .pagination-single .next {
+#content .pagination .next {
 	float: right;
+}
+#content ol.comments .entry-content {
+	color: #333;
 }
 #content ol.comments .meta {
 	color: #777;
 	font-size: 11px;
-	height: 30px;
-	line-height: 30px;
-	padding-left: 35px;
+	height: 25px;
+	line-height: 25px;
+	margin-bottom: 20px;
+	padding-left: 30px;
 	position: relative;
+}
+#content h3.pings {
+	margin-top: 40px;
+}
+#content ol.pings .meta {
+	height: 20px;
+	line-height: 20px;
+	padding-left: 0;
 }
 #content ol.comments .avatar {
 	left: 0;
@@ -197,7 +230,7 @@ div.loading {
 	color: #777;
 }
 #content ol.comments .meta .author {
-	color: #222;
+	color: #444;
 	font-size: 13px;
 	font-weight: bold;
 }
@@ -218,6 +251,7 @@ div.loading {
 #sidebar .widget ul li {
 	color: #999;
 	font-size: 12px;
+	list-style: disc;
 	margin: 0 0 5px 16px;
 	padding: 0;
 }
@@ -247,10 +281,10 @@ div.loading {
 	line-height: 30px;
 }
 #developer-link a, #footer p#developer-link a:visited {
-	background:url(../img/footer/by-crowd-favorite-dark.png) no-repeat;
+	background:url(../img/by-crowd-favorite.png) no-repeat;
 	display: block;
 	float:right;
 	height:30px;
 	text-indent:-32697px;
-	width:240px;
+	width:270px;
 }

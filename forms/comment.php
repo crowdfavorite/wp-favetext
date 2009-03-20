@@ -52,14 +52,9 @@ if ('open' == $post->comment_status) {
 				<em class="some-html-is-ok"><abbr title="<?php printf(__('You can use: %s', 'carrington-text'), allowed_tags()); ?>"><?php _e('Some HTML is OK', 'carrington-text'); ?></abbr></em>
 			</span>
 		</p>
-	<?php // if you're logged in...
-			if ($user_ID) {
-	?>
-		<p class="logged-in tight"><?php printf(__('Logged in as <a href="%s">%s</a>. ', 'carrington-text'), get_bloginfo('wpurl').'/wp-admin/profile.php', $user_identity); wp_loginout(); ?>.</p>
-	<?php
-			}
-			else { 
-	?>
+<?php
+		if (!$user_ID) {
+?>
 		<p class="comment-form-user-info tight">
 			<input type="text" id="author-p<?php echo $post->ID; ?>" name="author" value="<?php echo $comment_author; ?>" size="22" />
 			<label for="author-p<?php echo $post->ID; ?>"><?php _e('Name', 'carrington-text'); if ($req) { echo ' <em>' , _e('(required)', 'carrington-text'), '</em>'; } ?></label>
@@ -76,17 +71,22 @@ if ('open' == $post->comment_status) {
 			<input type="text" id="url-p<?php echo $post->ID; ?>" name="url" value="<?php echo $comment_author_url; ?>" size="22" />
 			<label title="<?php _e('Your website address', 'carrington-text'); ?>" for="url-p<?php echo $post->ID; ?>"><?php _e('Web', 'carrington-text'); ?></label>
 		</p><!--/url-->
-	<?php 
-			} 
-	?>
+<?php 
+		} 
+?>
 		<p class="tight">
 			<input name="submit" type="submit" value="<?php _e('Post Comment', 'carrington-text'); ?>" />
 			<span class="comment-form-trackback"><?php printf(__('or, reply to this post via <a rel="trackback" href="%s">trackback</a>.', 'carrington-text'), get_trackback_url()); ?></span>
 		</p>
-		<?php
-			cfct_comment_id_fields();
-			do_action('comment_form', $post->ID);
-		?>
+<?php // if you're logged in...
+		if ($user_ID) {
+?>
+		<p class="logged-in tight"><?php printf(__('Logged in as <a href="%s">%s</a>. ', 'carrington-text'), get_bloginfo('wpurl').'/wp-admin/profile.php', $user_identity); wp_loginout(); ?>.</p>
+<?php
+		}
+		cfct_comment_id_fields();
+		do_action('comment_form', $post->ID);
+?>
 	</form>
 </div>
 <?php 

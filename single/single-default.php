@@ -32,7 +32,7 @@ comments_template();
 
 ?>
 
-	<div class="pagination-single">
+	<div class="pagination pagination-single">
 		<span class="next"><?php next_post_link() ?></span>
 		<span class="previous"><?php previous_post_link() ?></span>
 	</div>

@@ -36,10 +36,6 @@ $blog_desc = get_bloginfo('description');
 	<link rel="stylesheet" type="text/css" media="screen, print, handheld" href="<?php bloginfo('template_url') ?>/css/carrington-text.css" />
 	
 <?php
-	// Javascript for threaded comments
-	if (is_singular()) {
-		wp_enqueue_script('comment-reply'); 
-	}
 	wp_head(); 
 ?>
 </head>

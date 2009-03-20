@@ -57,6 +57,7 @@ if ($comments || 'open' == $post->comment_status) {
 		}
 		if ($comment_count) {
 			cfct_template_file('comments', 'comments-loop');
+			cfct_form('comment');
 		}
 		if ($ping_count) {
 
@@ -69,7 +70,9 @@ if ($comments || 'open' == $post->comment_status) {
 			cfct_template_file('comments', 'pings-loop');
 		}
 	}
-	cfct_form('comment');
+	else {
+		cfct_form('comment');
+	}
 }
 
 ?>

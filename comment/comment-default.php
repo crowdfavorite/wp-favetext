@@ -39,20 +39,20 @@ comment_text();
 ?>
 	</div><!--.entry-content-->
 	<div class="clear"></div>
-	<div class="meta" style="background: url() no-repeat center left;">
+	<div class="meta">
 
 <?php
 
 edit_comment_link(__('Edit', 'carrington-text'), '<span class="comment-editlink">', '</span>');
 
 if (function_exists('get_avatar')) { 
-	echo get_avatar($comment, 30);
+	echo get_avatar($comment, 25);
 }
 
 echo '<span class="author">',comment_author_link(),'</span> &mdash; <a href="'.htmlspecialchars(get_comment_link( $comment->comment_ID )).'">',comment_date(),' @ ',comment_time(),'</a>';
 
 if (function_exists('comment_reply_link')) {
-	echo ' &mdash; ',comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'])), $comment, $post);
+	echo ' &mdash; ',comment_reply_link(array_merge( $args, array('respond_id' => 'respond-p' . $post->ID, 'depth' => $depth, 'max_depth' => $args['max_depth'])), $comment, $post);
 }
 
 ?>

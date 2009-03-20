@@ -21,7 +21,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 global $comments, $comment;
 
 ?>
-<ol>
+<ol class="comments pings">
 <?php
 foreach ($comments as $comment) {
 	if (get_comment_type() != 'comment') {

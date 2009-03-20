@@ -26,8 +26,8 @@ $cfct_options = array(
 	'cfct_ajax_load',
 	'cfct_lightbox',
 	'cfct_posts_per_archive_page',
-	'cfct_custom_colors',
-	'cfct_custom_header_image',
+	'cfct_text_custom_colors',
+	'cfct_text_custom_header_image',
 );
 
 $cfct_color_options = array(
@@ -93,12 +93,12 @@ jQuery(function($) {
 	}
 // preview
 	if (isset($_GET['cfct_action']) && $_GET['cfct_action'] == 'custom_color_preview' && current_user_can('manage_options')) {
-		cfct_custom_colors('preview');
+		cfct_text_custom_colors('preview');
 	}
-	else if (cfct_get_option('cfct_custom_colors') == 'yes') {
-		cfct_custom_colors();
+	else if (cfct_get_option('cfct_text_custom_colors') == 'yes') {
+		cfct_text_custom_colors();
 	}
-	if (cfct_get_option('cfct_custom_header_image') == 'yes') {
+	if (cfct_get_option('cfct_text_custom_header_image') == 'yes') {
 		$header_image = cfct_get_option('cfct_header_image');
 		if ($header_image != 0 && $img = wp_get_attachment_image_src($header_image, 'large')) {
 ?>
@@ -123,6 +123,10 @@ jQuery(function($) {
 	}
 }
 add_action('wp_head', 'cfct_text_head');
+
+function cfct_text_custom_colors($type = 'option') {
+	$colors = cfct_get_custom_colors($type);
+}
 
 include_once(CFCT_PATH.'functions/admin.php');
 
