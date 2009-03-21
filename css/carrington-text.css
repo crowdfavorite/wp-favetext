@@ -51,6 +51,12 @@ a, a:visited {
 	display: block;
 	float: none;
 }
+hr {
+	border: 0;
+	border-top: 1px solid #ccc;
+	height: 0;
+	margin: 20px 40px;
+}
 hr.divider {
 	clear: both;
 	float: none;
@@ -114,10 +120,6 @@ hr.divider {
 #content div.hentry.post {
 	margin-bottom: 40px;
 }
-#content div.entry-content {
-	color: #444;
-	margin-bottom: 10px;
-}
 #content .entry-title, #content .entry-title a, #content .entry-title a:visited {
 	color: #444;
 	margin-bottom: 10px;
@@ -126,6 +128,27 @@ hr.divider {
 #content .entry-title a:hover {
 	text-decoration: underline;
 }
+#content div.entry-content {
+	color: #444;
+	margin-bottom: 10px;
+}
+#content .entry-content blockquote {
+	border-left: 1px solid #ddd;
+	margin: 0 0 10px 20px;
+	padding: 7px 10px;
+}
+#content div.entry-content ol, #content div.entry-content ul {
+	margin: 0 0 10px 30px;
+	padding: 0;
+}
+#content div.entry-content ul {
+	list-style: disc;
+}
+#content div.entry-content li, #content ol.archive div.entry-content li {
+	margin: 0 0 5px 0;
+	padding: 0;
+}
+
 #content .comments-link {
 	margin-bottom: 15px;
 }
