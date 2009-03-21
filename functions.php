@@ -51,11 +51,24 @@ foreach ($cfct_color_options as $k => $default) {
 
 function cfct_text_option_defaults($options) {
 	$options['cfct_ajax_load'] = 'yes';
+	$options['cfct_lightbox'] = 'yes';
 	$options['cfct_custom_colors'] = 'no';
 	$options['cfct_custom_header_image'] = 'no';
 	return $options;
 }
 add_filter('cfct_option_defaults', 'cfct_text_option_defaults');
+
+function cfct_text_init() {
+	if (cfct_get_option('cfct_ajax_load') == 'yes') {
+		cfct_ajax_load();
+	}
+	if (cfct_get_option('cfct_lightbox') != 'no') {
+		wp_enqueue_script('cfct_thickbox', get_bloginfo('template_directory').'/carrington-core/lightbox/thickbox.js', array('jquery'), '1.0');
+// in the future we'll use this, but for now we want 2.5 compatibility
+//		wp_enqueue_style('jquery-lightbox', get_bloginfo('template_directory').'/carrington-core/lightbox/css/lightbox.css');
+	}
+}
+add_action('init', 'cfct_text_init');
 
 wp_enqueue_script('jquery');
 wp_enqueue_script('carrington-text', get_bloginfo('template_directory').'/js/carrington-text.js', array('jquery'), '1.0');

@@ -19,7 +19,7 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 if (have_posts()) {
-	echo '<ol>';
+	echo '<ol class="archive">';
 	while (have_posts()) {
 		the_post();
 ?>
@@ -27,6 +27,7 @@ if (have_posts()) {
 <?php
 		cfct_excerpt();
 ?>
+		<div id="post-content-<?php the_ID(); ?>-target"></div>
 	</li>
 <?php
 	}

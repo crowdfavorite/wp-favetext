@@ -70,6 +70,13 @@ hr.divider {
 .under {
 	margin-top: 20px;
 }
+.close {
+	margin-bottom: 40px;
+}
+.close a, .close a:visited {
+	color: #333;
+	font-size: 11px;
+}
 #content {
 	float: left;
 	margin: 0 40px 20px;
@@ -111,12 +118,12 @@ hr.divider {
 	color: #444;
 	margin-bottom: 10px;
 }
-#content h1.entry-title, #content h1.entry-title a, #content h1.entry-title a:visited {
+#content .entry-title, #content .entry-title a, #content .entry-title a:visited {
 	color: #444;
 	margin-bottom: 10px;
 	text-decoration: none;
 }
-#content h1.entry-title a:hover {
+#content .entry-title a:hover {
 	text-decoration: underline;
 }
 #content .comments-link {
@@ -161,6 +168,9 @@ hr.divider {
 #content h2.comments {
 	margin-bottom: 10px;
 }
+#content h3.pings {
+	margin-top: 40px;
+}
 #content form.comment-form {
 	color: #333;
 	margin-bottom: 20px;
@@ -200,15 +210,6 @@ hr.divider {
 #content ol.comments .depth-5 {
 	margin-left: 80px;
 }
-#content .pagination {
-	margin: 40px 0;
-}
-#content .pagination a, #content .pagination a:visited {
-	color: #333;
-}
-#content .pagination .next {
-	float: right;
-}
 #content ol.comments .entry-content {
 	color: #333;
 }
@@ -220,9 +221,6 @@ hr.divider {
 	margin-bottom: 20px;
 	padding-left: 30px;
 	position: relative;
-}
-#content h3.pings {
-	margin-top: 40px;
 }
 #content ol.pings .meta {
 	height: 20px;
@@ -247,6 +245,44 @@ hr.divider {
 }
 #content ol.comments .meta .comment-reply-link, #content ol.comments .meta .comment-reply-link:visited {
 	color: #333;
+}
+#content .pagination {
+	margin: 40px 0;
+}
+#content .pagination a, #content .pagination a:visited {
+	color: #333;
+}
+#content .pagination .next {
+	float: right;
+}
+#content ol.archive {
+	color: #444;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#content ol.archive li {
+	margin: 0 0 20px;
+	padding: 0;
+}
+#content ol.archive .meta, #content ol.archive .meta a, #content ol.archive .meta a:visited {
+	color: #777;
+	font-size: 11px;
+}
+#content ol.archive li.search h3, #content ol.archive li.search p {
+	line-height: 130%;
+	margin-bottom: 5px;
+}
+#content ol.archive li.search .meta {
+	line-height: 100%;
+}
+#content ol.archive .entry-title {
+	font: 18px Georgia, "Times New Roman", serif;
+	line-height: 100%;
+	margin-bottom: 5px;
+}
+#content ol.archive .hentry {
+	margin-bottom: 0;
 }
 #sidebar h2 {
 	font-size: 18px;
@@ -295,4 +331,32 @@ hr.divider {
 	height:30px;
 	text-indent:-32697px;
 	width:270px;
+}
+a#TB_prev:hover {
+	background:url(../img/lightbox-left.png) no-repeat left center;
+}
+a#TB_next:hover {
+	background:url(../img/lightbox-right.png) no-repeat right center;
+}
+#attachment p.top {
+	padding: 5px 10px;
+	text-align: left;
+}
+#attachment p.top a, #attachment p.top a:visited {
+	color: #666;
+}
+#attachment h1 {
+	margin: 10px 0;
+}
+#attachment a img {
+	border: 0;
+}
+#attachment .nav, #attachment #footer {
+	margin: 0 auto;
+	padding: 20px 0;
+	text-align: left;
+	width: 900px;
+}
+#attachment .nav .next {
+	float: right;
 }

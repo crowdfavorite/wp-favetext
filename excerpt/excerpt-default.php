@@ -19,19 +19,14 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
-<div>
+<div id="post-excerpt-<?php the_ID() ?>" <?php post_class('excerpt'); ?>>
+	<p class="entry-title"><a href="<?php the_permalink() ?>" rev="post-<?php the_ID(); ?>"><?php the_title(); ?></a></p>
+	<div class="meta"><?php the_time('M j, Y'); ?> &mdash; 
 
-<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-	
 <?php
 
-the_excerpt();
-
-the_time('F j, Y');
-
-the_category(', ');
-
-comments_popup_link(__('No comments', 'carrington-text'), __('1 comment', 'carrington-text'), __('% comments', 'carrington-text'));
+comments_popup_link(__('No Comments', 'carrington-text'), __('1 Comment', 'carrington-text'), __('% Comments', 'carrington-text'));
 
 ?>
+	</div>
 </div><!-- .excerpt -->
