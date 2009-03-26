@@ -20,9 +20,21 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 get_header();
 
-_e('Sorry, we\'re not sure what you\'re looking for here.', 'carrington-text'); 
+?>
+
+<div id="content">
+
+<p><?php _e('Sorry, we\'re not sure what you\'re looking for here.', 'carrington-text'); ?></p>
+
+<?php
 
 cfct_form('search');
+
+?>
+
+</div>
+
+<?php
 
 get_sidebar();
 

@@ -142,6 +142,7 @@ function cfct_text_custom_colors($type = 'option') {
 }
 
 include_once(CFCT_PATH.'functions/admin.php');
+include_once(CFCT_PATH.'functions/sidebars.php');
 
 include_once(CFCT_PATH.'carrington-core/carrington.php');
 
