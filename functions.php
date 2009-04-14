@@ -62,7 +62,7 @@ function cfct_text_init() {
 	if (cfct_get_option('cfct_ajax_load') == 'yes') {
 		cfct_ajax_load();
 	}
-	if (cfct_get_option('cfct_lightbox') != 'no') {
+	if (cfct_get_option('cfct_lightbox') != 'no' && !is_admin()) {
 		wp_enqueue_script('cfct_thickbox', get_bloginfo('template_directory').'/carrington-core/lightbox/thickbox.js', array('jquery'), '1.0');
 // in the future we'll use this, but for now we want 2.5 compatibility
 //		wp_enqueue_style('jquery-lightbox', get_bloginfo('template_directory').'/carrington-core/lightbox/css/lightbox.css');
@@ -135,7 +135,9 @@ jQuery(function($) {
 		}
 	}
 }
-add_action('wp_head', 'cfct_text_head');
+if (!is_admin()) {
+	add_action('wp_head', 'cfct_text_head');
+}
 
 function cfct_text_custom_colors($type = 'option') {
 	$colors = cfct_get_custom_colors($type);
