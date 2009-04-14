@@ -26,7 +26,7 @@ get_header();
 
 <?php
 
-cfct_content();
+cfct_loop();
 
 comments_template();
 
