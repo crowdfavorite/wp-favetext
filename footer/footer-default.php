@@ -29,7 +29,6 @@ if (cfct_get_option('cfct_credit') == 'yes') {
 }
 ?>
 			<p id="generator-link"><?php _e('Proudly powered by <a href="http://wordpress.org/" rel="generator">WordPress</a></span> and <span id="theme-link"><a href="http://carringtontheme.com" title="Carrington theme for WordPress">Carrington</a></span>.', 'carrington-text'); ?></p>
-			</div><!--.wrapper-->
 		</div><!--#footer -->
 	</div><!--#page-->
 	<?php wp_footer() ?>
