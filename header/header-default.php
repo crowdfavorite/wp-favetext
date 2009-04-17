@@ -34,7 +34,11 @@ $blog_desc = get_bloginfo('description');
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	
 	<link rel="stylesheet" type="text/css" media="screen, print, handheld" href="<?php bloginfo('template_url') ?>/css/carrington-text.css" />
-	
+
+	<!--[if lt IE 7]>
+		<style> #content { margin-left: 20px; margin-right: 20px; } </style>
+	<![endif]-->
+
 <?php
 	wp_head(); 
 ?>
