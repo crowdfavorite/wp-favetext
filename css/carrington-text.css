@@ -352,6 +352,7 @@ hr.divider {
 	display: block;
 	float:right;
 	height:30px;
+	overflow: hidden;
 	text-indent:-32697px;
 	width:270px;
 }
