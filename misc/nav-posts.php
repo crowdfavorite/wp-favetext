@@ -17,6 +17,6 @@
 
 ?>
 <div class="pagination">
-	<span class="previous"><?php previous_posts_link(__('&laquo; Previous', 'carrington-text')) ?></span>
 	<span class="next"><?php next_posts_link(__('Next &raquo;', 'carrington-text')) ?></span>
+	<span class="previous"><?php previous_posts_link(__('&laquo; Previous', 'carrington-text')) ?></span>
 </div>
