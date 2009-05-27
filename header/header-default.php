@@ -36,7 +36,7 @@ $blog_desc = get_bloginfo('description');
 	<link rel="stylesheet" type="text/css" media="screen, print, handheld" href="<?php bloginfo('template_url') ?>/css/carrington-text.css" />
 
 	<!--[if lt IE 7]>
-		<style> #content { margin-left: 20px; margin-right: 20px; } </style>
+	<style>	#content { margin-left: 20px; margin-right: 20px; } #developer-link a, #footer p#developer-link a:visited { background-image: url(<?php bloginfo('template_url') ?>/img/by-crowd-favorite.png); } </style>
 	<![endif]-->
 
 <?php

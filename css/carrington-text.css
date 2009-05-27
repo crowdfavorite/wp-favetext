@@ -307,6 +307,9 @@ hr.divider {
 #content ol.archive .hentry {
 	margin-bottom: 0;
 }
+#sidebar {
+	color: #444;
+}
 #sidebar h2 {
 	font-size: 18px;
 	margin: 20px 0 10px;
