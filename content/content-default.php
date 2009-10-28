@@ -37,7 +37,9 @@ $previousday = -1;
 		<div class="clear"></div>
 	</div><!--/entry-content-->
 	<div class="clear"></div>
-	<p class="comments-link"><?php comments_popup_link(__('No Comments', 'carrington-text'), __('1 Comment', 'carrington-text'), __('% Comments', 'carrington-text')); ?></p>
+	<?php if (!is_singular()) { ?>
+		<p class="comments-link"><?php comments_popup_link(__('No Comments', 'carrington-text'), __('1 Comment', 'carrington-text'), __('% Comments', 'carrington-text')); ?></p>
+	<?php } ?>
 	<div id="post-comments-<?php the_ID(); ?>-target"></div>
 	<p class="filed categories"><?php printf(__('Categories: %s.', 'carrington-text'), get_the_category_list(', ')) ?></p>
 	<?php the_tags(__('<p class="filed tags">Tags: ', 'carrington-text'), ', ', '</p>'); ?>
