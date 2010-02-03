@@ -47,7 +47,7 @@ $previousday = -1;
 	<div class="by-line">
 		<?php edit_post_link(__('Edit', 'carrington-text'), '<div class="entry-editlink">', '</div>'); ?>
 		<address class="author vcard full-author">
-			<?php printf(__('<span class="by">By</span> %s', 'carrington-text'), '<a class="url fn" href="'.get_author_link(false, get_the_author_ID(), $authordata->user_nicename).'" title="View all posts by ' . attribute_escape($authordata->display_name) . '">'.get_the_author().'</a>') ?>
+			<?php printf(__('<span class="by">By</span> %s', 'carrington-text'), '<a class="url fn" href="'.get_author_posts_url(get_the_author_meta('ID'), $authordata->user_nicename).'" title="View all posts by ' . attribute_escape($authordata->display_name) . '">'.get_the_author().'</a>') ?>
 		</address>
 		&mdash;
 		<span class="date full-date"><?php the_date(); _e(' at ', 'carrington-text'); the_time(); ?></span>
