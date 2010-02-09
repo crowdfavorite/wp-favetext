@@ -18,7 +18,7 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-global $previousday, $authordata;
+global $previousday;
 $previousday = -1;
 
 ?>
@@ -36,7 +36,6 @@ $previousday = -1;
 ?>
 		<div class="clear"></div>
 	</div><!--/entry-content-->
-	<div class="clear"></div>
 	<?php if (!is_singular()) { ?>
 		<p class="comments-link"><?php comments_popup_link(__('No Comments', 'carrington-text'), __('1 Comment', 'carrington-text'), __('% Comments', 'carrington-text')); ?></p>
 	<?php } ?>
@@ -47,9 +46,9 @@ $previousday = -1;
 	<div class="by-line">
 		<?php edit_post_link(__('Edit', 'carrington-text'), '<div class="entry-editlink">', '</div>'); ?>
 		<address class="author vcard full-author">
-			<?php printf(__('<span class="by">By</span> %s', 'carrington-text'), '<a class="url fn" href="'.get_author_posts_url(get_the_author_meta('ID'), $authordata->user_nicename).'" title="View all posts by ' . attribute_escape($authordata->display_name) . '">'.get_the_author().'</a>') ?>
+			<?php printf(__('<span class="by">By</span> %s', 'carrington-blog'), '<a class="url fn" href="'.get_author_posts_url(get_the_author_meta('ID')).'" title="View all posts by ' . attribute_escape(get_the_author()) . '">'.get_the_author().'</a>') ?>
 		</address>
 		&mdash;
-		<span class="date full-date"><?php the_date(); _e(' at ', 'carrington-text'); the_time(); ?></span>
+		<span class="date full-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i'); ?>"><?php the_date(); _e(' at ', 'carrington-text'); the_time(); ?></abbr></span>
 	</div><!--/by-line-->
 </div><!-- .post -->

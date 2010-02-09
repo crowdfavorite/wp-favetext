@@ -18,7 +18,7 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-global $previousday, $authordata;
+global $previousday;
 $previousday = -1;
 
 ?>
@@ -38,6 +38,6 @@ $previousday = -1;
 	<div class="clear"></div>
 	<div class="by-line">
 		<?php edit_post_link(__('Edit', 'carrington-text'), '<div class="entry-editlink">', '</div>'); ?>
-		<span class="date full-date"><?php the_date(); _e(' at ', 'carrington-text'); the_time(); ?></span>
+		<span class="date full-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i'); ?>"><?php the_date(); _e(' at ', 'carrington-text'); the_time(); ?></abbr></span>
 	</div><!--/by-line-->
 </div><!-- .post -->
