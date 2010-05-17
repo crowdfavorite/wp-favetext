@@ -51,7 +51,7 @@ if (function_exists('get_avatar')) {
 
 echo '<span class="author">',comment_author_link(),'</span> &mdash; <a href="'.htmlspecialchars(get_comment_link( $comment->comment_ID )).'">',comment_date(),' @ ',comment_time(),'</a>';
 
-if (function_exists('comment_reply_link')) {
+if (function_exists('comment_reply_link') && get_option('thread_comments')) {
 	echo ' &mdash; ',comment_reply_link(array_merge( $args, array('respond_id' => 'respond-p' . $post->ID, 'depth' => $depth, 'max_depth' => $args['max_depth'])), $comment, $post);
 }
 
