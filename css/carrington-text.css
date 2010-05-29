@@ -130,7 +130,7 @@ hr.divider {
 }
 #content div.entry-content {
 	color: #444;
-	margin-bottom: 10px;
+	padding-bottom: 15px;
 }
 #content .entry-content blockquote {
 	border-left: 1px solid #ddd;
