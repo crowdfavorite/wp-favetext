@@ -18,7 +18,7 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-global $post, $user_ID, $user_identity;
+global $post, $user_identity;
 
 $commenter = wp_get_current_commenter();
 extract($commenter);
@@ -28,7 +28,7 @@ $req = get_option('require_name_email');
 // if post is open to new comments
 if ('open' == $post->comment_status) {
 	// if you need to be regestered to post comments..
-	if ( get_option('comment_registration') && !$user_ID ) { ?>
+	if ( get_option('comment_registration') && !is_user_logged_in() ) { ?>
 
 <p id="you-must-be-logged-in-to-comment"><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'carrington-text'), get_bloginfo('wpurl').'/wp-login.php?redirect_to='.urlencode(get_permalink())); ?></p>
 
@@ -53,7 +53,7 @@ if ('open' == $post->comment_status) {
 			</span>
 		</p>
 <?php
-		if (!$user_ID) {
+		if (!is_user_logged_in()) {
 ?>
 		<p class="comment-form-user-info tight">
 			<input type="text" id="author-p<?php echo $post->ID; ?>" name="author" value="<?php echo $comment_author; ?>" size="22" />
@@ -79,7 +79,7 @@ if ('open' == $post->comment_status) {
 			<span class="comment-form-trackback"><?php printf(__('or, reply to this post via <a rel="trackback" href="%s">trackback</a>.', 'carrington-text'), get_trackback_url()); ?></span>
 		</p>
 <?php // if you're logged in...
-		if ($user_ID) {
+		if (is_user_logged_in()) {
 ?>
 		<p class="logged-in tight"><?php printf(__('Logged in as <a href="%s">%s</a>. ', 'carrington-text'), get_bloginfo('wpurl').'/wp-admin/profile.php', $user_identity); wp_loginout(); ?>.</p>
 <?php
