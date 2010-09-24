@@ -30,7 +30,12 @@ if ('open' == $post->comment_status) {
 	// if you need to be regestered to post comments..
 	if ( get_option('comment_registration') && !is_user_logged_in() ) { ?>
 
-<p id="you-must-be-logged-in-to-comment"><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'carrington-text'), get_bloginfo('wpurl').'/wp-login.php?redirect_to='.urlencode(get_permalink())); ?></p>
+<p id="you-must-be-logged-in-to-comment"><?php
+		printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'carrington-text'), wp_login_url(urlencode(get_permalink())) );
+		if (get_option('users_can_register')) {
+			printf(' ' . __('Not a member? %s now!', 'carrington-text'), wp_register('','', false) ); 
+		}
+?></p>
 
 <?php
 	}
