@@ -26,7 +26,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 the_excerpt();
 
 ?>
-	<div class="meta"><abbr class="published" title="<?php the_time('Y-m-d\TH:i'); ?>"><?php the_time('M j, Y'); ?></abbr> &mdash; 
+	<div class="meta"><abbr class="published" title="<?php the_time('c'); ?>"><?php the_time('M j, Y'); ?></abbr> &mdash; 
 
 <?php
 

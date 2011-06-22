@@ -34,6 +34,6 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<div class="clear"></div>
 	<div class="by-line">
 		<?php edit_post_link(__('Edit', 'carrington-text'), '<div class="entry-editlink">', '</div>'); ?>
-		<span class="date full-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i'); ?>"><?php the_time('F j, Y'); _e(' at ', 'carrington-text'); the_time(); ?></abbr></span>
+		<span class="date full-date"><abbr class="published" title="<?php the_time('c'); ?>"><?php the_time('F j, Y'); _e(' at ', 'carrington-text'); the_time(); ?></abbr></span>
 	</div><!--/by-line-->
 </div><!-- .post -->
