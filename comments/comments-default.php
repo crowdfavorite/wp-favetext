@@ -46,7 +46,9 @@ if (have_comments() || comments_open()) {
 			previous_comments_link();
 			next_comments_link();
 		}
-		cfct_form('comment');
+
+		comment_form();
+
 		if ($ping_count) {
 ?>
 <h3 class="pings"><?php _e('Continuing the Discussion', 'carrington-text'); ?></h3>

@@ -198,15 +198,25 @@ hr.divider {
 	color: #333;
 	margin-bottom: 20px;
 }
-#content form.comment-form label em {
+.comment-form-title {
+	line-height: 1.2777;
+}
+.comment-form-title small {
+	color: #333;
+	font-size:  13px;
+	font-family: 'Lucida Grande', Calibri, Helvetica, Arial, sans-serif;
+}
+#content form.comment-form .help {
 	color: #777;
 	font-size: 11px;
 	font-style: normal;
 }
 #content .some-html-is-ok {
 	color: #666;
+	display: block;
 	font-size: 11px;
 	font-style: normal;
+	margin-bottom: 14px;
 }
 #content .comment-form-trackback, #content .comment-form-trackback a, #content .comment-form-trackback a:visited {
 	color: #555;
