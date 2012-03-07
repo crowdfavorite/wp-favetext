@@ -27,7 +27,7 @@ if (cfct_get_option('cfct_credit') == 'yes') {
 <?php
 }
 ?>
-			<p id="generator-link"><?php _e('Proudly powered by <a href="http://wordpress.org/" rel="generator">WordPress</a> and <a href="http://crowdfavorite.com/wordpress/carrington/">Carrington</a>.', 'carrington-blog'); ?></p>
+			<p id="generator-link"><?php _e('Proudly powered by <a href="http://wordpress.org/" rel="generator">WordPress</a> and <a href="http://crowdfavorite.com/wordpress/carrington/">Carrington</a>.', 'carrington-text'); ?></p>
 		</div><!--#footer -->
 	</div><!--#page-->
 	<?php wp_footer() ?>
