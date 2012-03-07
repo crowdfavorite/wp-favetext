@@ -55,6 +55,9 @@ foreach ($cfct_color_options as $k => $default) {
 
 add_theme_support( 'automatic-feed-links' );
 
+// If the content width is not defined elsewhere, it will be set to 900px.
+if ( ! isset( $content_width ) ) $content_width = 900;
+
 function cfct_text_option_defaults($options) {
 	$options['cfct_ajax_load'] = 'yes';
 	$options['cfct_lightbox'] = 'yes';
