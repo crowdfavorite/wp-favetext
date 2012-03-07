@@ -1,9 +1,8 @@
 <?php
 
-// This file is part of the Carrington Text Theme for WordPress
-// http://carringtontheme.com
+// This file is part of the FaveText Theme for WordPress
 //
-// Copyright (c) 2008-2010 Crowd Favorite, Ltd. All rights reserved.
+// Copyright (c) 2008-2012 Crowd Favorite, Ltd. All rights reserved.
 // http://crowdfavorite.com
 //
 // Released under the GPL license
