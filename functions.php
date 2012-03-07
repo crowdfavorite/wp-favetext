@@ -53,6 +53,8 @@ foreach ($cfct_color_options as $k => $default) {
 	$cfct_options[] = $k;
 }
 
+add_theme_support( 'automatic-feed-links' );
+
 function cfct_text_option_defaults($options) {
 	$options['cfct_ajax_load'] = 'yes';
 	$options['cfct_lightbox'] = 'yes';

@@ -65,7 +65,7 @@ function cfct_blog_settings_form() {
 	';
 	foreach ($cfct_color_options as $option => $default) {
 		$value = get_option($option);
-		$value == '' ? $value = $default : $value = attribute_escape($value);
+		$value == '' ? $value = $default : $value = esc_attr($value);
 		$label = ucwords(str_replace(
 			array('cfct_', '_'),
 			array('', ' '),

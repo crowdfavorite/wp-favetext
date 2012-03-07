@@ -41,7 +41,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<div class="by-line">
 		<?php edit_post_link(__('Edit', 'carrington-text'), '<div class="entry-editlink">', '</div>'); ?>
 		<address class="author vcard full-author">
-			<?php printf(__('<span class="by">By</span> %s', 'carrington-blog'), '<a class="url fn" href="'.get_author_posts_url(get_the_author_meta('ID')).'" title="View all posts by ' . attribute_escape(get_the_author()) . '">'.get_the_author().'</a>') ?>
+			<?php printf(__('<span class="by">By</span> %s', 'carrington-blog'), '<a class="url fn" href="'.get_author_posts_url(get_the_author_meta('ID')).'" title="View all posts by ' . esc_attr(get_the_author()) . '">'.get_the_author().'</a>') ?>
 		</address>
 		&mdash;
 		<span class="date full-date"><abbr class="published" title="<?php the_time('c'); ?>"><?php the_time('F j, Y'); __(' at ', 'carrington-text'); the_time(); ?></abbr></span>

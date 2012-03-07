@@ -56,7 +56,7 @@ if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Primary Sidebar') 
 		<div class="widget">
 			<h2 class="title"><?php _e('Categories', 'carrington-text'); ?></h2>
 			<ul>
-				<?php wp_list_cats(); ?>
+				<?php wp_list_categories(); ?>
 			</ul>
 		</div><!--.widget-->
 		<div class="widget">
