@@ -413,6 +413,14 @@ a#TB_next:hover {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.sticky {
+	position:absolute;
+}
+
+.postbyauthor {
+
+}
 .wp-caption {
 	text-align: center;
 	background-color: #eee;
@@ -436,6 +444,12 @@ a#TB_next:hover {
 	border: 0 none;
 }
 .wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 4px 0 0;
+	margin: 0;
+}
+.wp-caption .gallery-caption {
 	font-size: 11px;
 	line-height: 17px;
 	padding: 4px 0 0;
