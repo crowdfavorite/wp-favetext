@@ -33,10 +33,10 @@ $blog_desc = get_bloginfo('description');
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	
-	<link rel="stylesheet" type="text/css" media="screen, print, handheld" href="<?php bloginfo('template_url') ?>/css/carrington-text.css" />
+	<link rel="stylesheet" type="text/css" media="screen, print, handheld" href="<?php echo get_template_directory_uri() ?>/css/carrington-text.css" />
 
 	<!--[if lt IE 7]>
-	<style>	#content { margin-left: 20px; margin-right: 20px; } #developer-link a, #footer p#developer-link a:visited { background-image: url(<?php bloginfo('template_url') ?>/img/by-crowd-favorite.png); } </style>
+	<style>	#content { margin-left: 20px; margin-right: 20px; } #developer-link a, #footer p#developer-link a:visited { background-image: url(<?php echo get_template_directory_uri() ?>/img/by-crowd-favorite.png); } </style>
 	<![endif]-->
 
 <?php

@@ -72,15 +72,15 @@ function cfct_text_init() {
 		cfct_ajax_load();
 	}
 	if (cfct_get_option('cfct_lightbox') != 'no' && !is_admin()) {
-		wp_enqueue_script('cfct_thickbox', get_bloginfo('template_directory').'/carrington-core/lightbox/thickbox.js', array('jquery'), '1.0');
+		wp_enqueue_script('cfct_thickbox', get_template_directory_uri().'/carrington-core/lightbox/thickbox.js', array('jquery'), '1.0');
 // in the future we'll use this, but for now we want 2.5 compatibility
-//		wp_enqueue_style('jquery-lightbox', get_bloginfo('template_directory').'/carrington-core/lightbox/css/lightbox.css');
+//		wp_enqueue_style('jquery-lightbox', get_template_directory_uri().'/carrington-core/lightbox/css/lightbox.css');
 	}
 }
 add_action('init', 'cfct_text_init');
 
 wp_enqueue_script('jquery');
-wp_enqueue_script('carrington-text', get_bloginfo('template_directory').'/js/carrington-text.js', array('jquery'), '1.0');
+wp_enqueue_script('carrington-text', get_template_directory_uri().'/js/carrington-text.js', array('jquery'), '1.0');
 
 // Filter comment reply link to work with namespaced comment-reply javascript.
 add_filter('cancel_comment_reply_link', 'cfct_get_cancel_comment_reply_link', 10, 3);
@@ -89,7 +89,7 @@ function cfct_text_head() {
 // see enqueued style in cfct_blog_init, we'll activate that in the future
 	if (cfct_get_option('cfct_lightbox') != 'no') {
 		echo '
-<link rel="stylesheet" type="text/css" media="screen" href="'.get_bloginfo('template_directory').'/carrington-core/lightbox/css/thickbox.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="'.get_template_directory_uri().'/carrington-core/lightbox/css/thickbox.css" />
 		';
 	}
 	cfct_get_option('cfct_ajax_load') == 'no' ? $ajax_load = 'false' : $ajax_load = 'true';
@@ -102,7 +102,7 @@ var CFCT_AJAX_LOAD = '.$ajax_load.';
 	if (cfct_get_option('cfct_lightbox') != 'no') {
 		echo '
 <script type="text/javascript">
-tb_pathToImage = "' . get_bloginfo('template_directory') . '/carrington-core/lightbox/img/loadingAnimation.gif";
+tb_pathToImage = "' . get_template_directory_uri() . '/carrington-core/lightbox/img/loadingAnimation.gif";
 jQuery(function($) {
 	$("a.thickbox").each(function() {
 		var url = $(this).attr("rel");
