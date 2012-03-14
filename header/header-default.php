@@ -32,8 +32,6 @@ $blog_desc = get_bloginfo('description');
 	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'carrington-text' ), esc_html( get_bloginfo('name'), 1 ) ) ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 	<?php wp_get_archives('type=monthly&format=link'); ?>
-	
-	<link rel="stylesheet" type="text/css" media="screen, print, handheld" href="<?php echo get_template_directory_uri() ?>/css/carrington-text.css" />
 
 	<!--[if lt IE 7]>
 	<style>	#content { margin-left: 20px; margin-right: 20px; } #developer-link a, #footer p#developer-link a:visited { background-image: url(<?php echo get_template_directory_uri() ?>/img/by-crowd-favorite.png); } </style>

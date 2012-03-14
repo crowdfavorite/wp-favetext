@@ -25,6 +25,15 @@ include_once(CFCT_PATH.'functions/admin.php');
 include_once(CFCT_PATH.'functions/sidebars.php');
 include_once(CFCT_PATH.'carrington-core/carrington.php');
 
+/**
+ * Load in assets at wp_enqueue_scripts hook
+ * This function loads a file that contains calls to wp_enqueue_script
+ * and wp_enqueue_style, etc.
+ */
+function cfct_load_front_end_assets() {
+	cfct_template_file('assets', 'load');
+}
+add_action('wp_enqueue_scripts', 'cfct_load_front_end_assets');
 
 $cfct_options = array(
 	'cfct_ajax_load',
@@ -78,9 +87,6 @@ function cfct_text_init() {
 	}
 }
 add_action('init', 'cfct_text_init');
-
-wp_enqueue_script('jquery');
-wp_enqueue_script('carrington-text', get_template_directory_uri().'/js/carrington-text.js', array('jquery'), '1.0');
 
 // Filter comment reply link to work with namespaced comment-reply javascript.
 add_filter('cancel_comment_reply_link', 'cfct_get_cancel_comment_reply_link', 10, 3);
