@@ -20,6 +20,7 @@ load_theme_textdomain('carrington-text');
 
 define('CFCT_DEBUG', false);
 define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
+define('CFCT_VER', '1.1');
 
 include_once(CFCT_PATH.'functions/admin.php');
 include_once(CFCT_PATH.'functions/sidebars.php');
