@@ -415,7 +415,8 @@ a#TB_next:hover {
 }
 
 .sticky {
-	position:absolute;
+	border:2px solid #444;
+	padding:10px;
 }
 
 .bypostauthor {
