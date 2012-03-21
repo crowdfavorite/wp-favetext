@@ -24,6 +24,7 @@ define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
 include_once(CFCT_PATH.'functions/admin.php');
 include_once(CFCT_PATH.'functions/sidebars.php');
 include_once(CFCT_PATH.'carrington-core/carrington.php');
+define('CFCT_VER', '1.4');
 
 /**
  * Load in assets at wp_enqueue_scripts hook
@@ -64,8 +65,10 @@ foreach ($cfct_color_options as $k => $default) {
 
 add_theme_support( 'automatic-feed-links' );
 
-// If the content width is not defined elsewhere, it will be set to 900px.
-if ( ! isset( $content_width ) ) $content_width = 900;
+// If the content width is not defined elsewhere, it will be set to 550px.
+if (! isset($content_width)) {
+	$content_width = 550;
+}
 
 function cfct_text_option_defaults($options) {
 	$options['cfct_ajax_load'] = 'yes';

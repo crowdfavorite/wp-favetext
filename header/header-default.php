@@ -47,6 +47,6 @@ $blog_desc = get_bloginfo('description');
 <div id="page">
 	<p id="top"><a id="to-content" href="#content"><?php _e( 'Skip to content', 'carrington' ); ?></a></p>
 	<div id="header">
-		<strong id="blog-title"><a href="<?php echo home_url(/) ?>" title="Home" rel="home"><?php bloginfo('name') ?></a></strong>
+		<strong id="blog-title"><a href="<?php echo home_url('/') ?>" title="Home" rel="home"><?php bloginfo('name') ?></a></strong>
 		<p id="blog-description"><?php bloginfo('description'); ?></p>
 	</div><!-- #header -->
