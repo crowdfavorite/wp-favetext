@@ -20,7 +20,6 @@ load_theme_textdomain('carrington-text');
 
 define('CFCT_DEBUG', false);
 define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
-define('CFCT_VER', '1.1');
 
 include_once(CFCT_PATH.'functions/admin.php');
 include_once(CFCT_PATH.'functions/sidebars.php');
@@ -80,11 +79,6 @@ add_filter('cfct_option_defaults', 'cfct_text_option_defaults');
 function cfct_text_init() {
 	if (cfct_get_option('cfct_ajax_load') == 'yes') {
 		cfct_ajax_load();
-	}
-	if (cfct_get_option('cfct_lightbox') != 'no' && !is_admin()) {
-		wp_enqueue_script('cfct_thickbox', get_template_directory_uri().'/carrington-core/lightbox/thickbox.js', array('jquery'), '1.0');
-// in the future we'll use this, but for now we want 2.5 compatibility
-//		wp_enqueue_style('jquery-lightbox', get_template_directory_uri().'/carrington-core/lightbox/css/lightbox.css');
 	}
 }
 add_action('init', 'cfct_text_init');
