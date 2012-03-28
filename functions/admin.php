@@ -47,8 +47,8 @@ function cfct_blog_settings_form() {
 	if (intval($cfct_posts_per_archive_page) == 0) {
 		$cfct_posts_per_archive_page = 25;
 	}
-// 	cfct_get_option('cfct_custom_colors') == 'no' ? $colors_class = 'hidden' : $colors_class = '';
-// 	cfct_get_option('cfct_custom_header_image') == 'no' ? $header_image_class = 'hidden' : $header_image_class = '';
+	cfct_get_option('cfct_custom_colors') == 'no' ? $colors_class = 'hidden' : $colors_class = '';
+	cfct_get_option('cfct_custom_header_image') == 'no' ? $header_image_class = 'hidden' : $header_image_class = '';
 	$html = '
 		<table class="form-table">
 			<tbody>
