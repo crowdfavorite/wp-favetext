@@ -11,7 +11,11 @@ body {
 	text-align: left;
 	width: 920px;
 }
-h1, h2, h3, h4, #header strong {
+h1, 
+h2, 
+h3, 
+h4, 
+#header strong {
 	font: 22px Georgia, "Times New Roman", serif;
 	margin: 0 0 20px 0;
 	padding: 0;
@@ -28,22 +32,30 @@ h4 {
 	color: #333;
 	font-size: 16px;
 }
-p, li, td {
+p, 
+li, 
+td {
 	line-height: 150%;
 }
-ul, ol, dl, p {
+ul, 
+ol, 
+dl, 
+p {
 	margin: 0 0 10px 0;
 	padding: 0;
 }
 li {
 	margin: 0 0 5px 30px;
 }
-input, textarea, select {
+input, 
+textarea, 
+select {
 	font-family: "Lucida Grande", Calibri, Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	padding: 4px;
 }
-a, a:visited {
+a, 
+a:visited {
 	color: #00f;
 }
 .clear {
@@ -79,7 +91,8 @@ hr.divider {
 .close {
 	margin-bottom: 40px;
 }
-.close a, .close a:visited {
+.close a, 
+.close a:visited {
 	color: #333;
 	font-size: 11px;
 }
@@ -96,10 +109,12 @@ hr.divider {
 #top a {
 	display: none;
 }
-#header, #footer {
+#header, 
+#footer {
 	padding: 20px 40px;
 }
-#blog-title a, #blog-title a:visited {
+#blog-title a, 
+#blog-title a:visited {
 	color: #444;
 	font-size: 30px;
 	text-decoration: none;
@@ -107,7 +122,10 @@ hr.divider {
 #blog-description {
 	color: #999;
 }
-#content .entry-content h1, #content .entry-content h2, #content .entry-content h3, #content .entry-content h4 {
+#content .entry-content h1, 
+#content .entry-content h2, 
+#content .entry-content h3, 
+#content .entry-content h4 {
 	margin: 20px 0 10px;
 	padding: 0;
 }
@@ -120,7 +138,9 @@ hr.divider {
 #content div.hentry.post {
 	margin-bottom: 40px;
 }
-#content .entry-title, #content .entry-title a, #content .entry-title a:visited {
+#content .entry-title, 
+#content .entry-title a, 
+#content .entry-title a:visited {
 	color: #444;
 	margin-bottom: 10px;
 	text-decoration: none;
@@ -137,14 +157,16 @@ hr.divider {
 	margin: 0 0 10px 20px;
 	padding: 7px 10px;
 }
-#content div.entry-content ol, #content div.entry-content ul {
+#content div.entry-content ol, 
+#content div.entry-content ul {
 	margin: 0 0 10px 30px;
 	padding: 0;
 }
 #content div.entry-content ul {
 	list-style: disc;
 }
-#content div.entry-content li, #content ol.archive div.entry-content li {
+#content div.entry-content li, 
+#content ol.archive div.entry-content li {
 	margin: 0 0 5px 0;
 	padding: 0;
 }
@@ -152,7 +174,8 @@ hr.divider {
 #content .comments-link {
 	margin-bottom: 15px;
 }
-#content p.comments-link a, #content p.comments-link a:visited {
+#content p.comments-link a, 
+#content p.comments-link a:visited {
 	color: #333;
 }
 #content .by-line, #content .filed {
@@ -172,11 +195,13 @@ hr.divider {
 	display: inline;
 	font-style: normal;
 }
-#content .entry-editlink, #content .comment-editlink {
+#content .entry-editlink, 
+#content .comment-editlink {
 	visibility: hidden;
 	float: right;
 }
-#content .hentry:hover .entry-editlink, #content .hentry:hover .comment-editlink {
+#content .hentry:hover .entry-editlink, 
+#content .hentry:hover .comment-editlink {
 	visibility: visible;
 	float: right;
 }
@@ -184,7 +209,8 @@ hr.divider {
 	padding-top: 5px;
 	float: right;
 }
-#content a.comment-feed, #content a.comment-feed:visited {
+#content a.comment-feed, 
+#content a.comment-feed:visited {
 	color: #333;
 	font-size: 12px;
 }
@@ -218,7 +244,9 @@ hr.divider {
 	font-style: normal;
 	margin-bottom: 14px;
 }
-#content .comment-form-trackback, #content .comment-form-trackback a, #content .comment-form-trackback a:visited {
+#content .comment-form-trackback, 
+#content .comment-form-trackback a, 
+#content .comment-form-trackback a:visited {
 	color: #555;
 	font-size: 11px;
 }
@@ -265,7 +293,8 @@ hr.divider {
 	position: absolute;
 	top: 0;
 }
-#content ol.comments .meta a, #content ol.comments .meta a:visited {
+#content ol.comments .meta a, 
+#content ol.comments .meta a:visited {
 	color: #777;
 }
 #content ol.comments .meta .author {
@@ -273,16 +302,19 @@ hr.divider {
 	font-size: 13px;
 	font-weight: bold;
 }
-#content ol.comments .meta .author a, #content ol.comments .meta .author a:visited {
+#content ol.comments .meta .author a,
+ #content ol.comments .meta .author a:visited {
 	color: #00f;
 }
-#content ol.comments .meta .comment-reply-link, #content ol.comments .meta .comment-reply-link:visited {
+#content ol.comments .meta .comment-reply-link, 
+#content ol.comments .meta .comment-reply-link:visited {
 	color: #333;
 }
 #content .pagination {
 	margin: 40px 0;
 }
-#content .pagination a, #content .pagination a:visited {
+#content .pagination a, 
+#content .pagination a:visited {
 	color: #333;
 }
 #content .pagination .next {
@@ -298,11 +330,14 @@ hr.divider {
 	margin: 0 0 20px;
 	padding: 0;
 }
-#content ol.archive .meta, #content ol.archive .meta a, #content ol.archive .meta a:visited {
+#content ol.archive .meta, 
+#content ol.archive .meta a, 
+#content ol.archive .meta a:visited {
 	color: #777;
 	font-size: 11px;
 }
-#content ol.archive li.search h3, #content ol.archive li.search p {
+#content ol.archive li.search h3, 
+#content ol.archive li.search p {
 	line-height: 130%;
 	margin-bottom: 5px;
 }
@@ -335,7 +370,8 @@ hr.divider {
 	margin: 0 0 5px 16px;
 	padding: 0;
 }
-#sidebar .widget a, #sidebar .widget a:visited {
+#sidebar .widget a, 
+#sidebar .widget a:visited {
 	color: #555;
 }
 #sidebar .meta {
@@ -349,7 +385,8 @@ hr.divider {
 #carrington-about h2 {
 	margin-top: 0;
 }
-#footer, #footer a, #footer a:visited {
+#footer, #footer a, 
+#footer a:visited {
 	color: #999;
 	font-size: 12px;
 }
@@ -374,7 +411,8 @@ a#TB_next:hover {
 	padding: 5px 10px;
 	text-align: left;
 }
-#attachment p.top a, #attachment p.top a:visited {
+#attachment p.top a, 
+#attachment p.top a:visited {
 	color: #666;
 }
 #attachment h1 {
@@ -383,7 +421,8 @@ a#TB_next:hover {
 #attachment a img {
 	border: 0;
 }
-#attachment .nav, #attachment #footer {
+#attachment .nav, 
+#attachment #footer {
 	margin: 0 auto;
 	padding: 20px 0;
 	text-align: left;

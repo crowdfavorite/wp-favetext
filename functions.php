@@ -18,13 +18,25 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 
 load_theme_textdomain('carrington-text');
 
+
+/**
+ * Set this to "true" to turn on debugging mode.
+ * Debug helps with development by showing you the paths of the files loaded by Carrington.
+ */
 define('CFCT_DEBUG', false);
 define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
 
 include_once(CFCT_PATH.'functions/admin.php');
 include_once(CFCT_PATH.'functions/sidebars.php');
 include_once(CFCT_PATH.'carrington-core/carrington.php');
-define('CFCT_VER', '1.4');
+
+/**
+ * Theme URL version.
+ * Added to query var at the end of assets to force browser cache to reload after upgrade.
+ */
+if (!(defined('CFCT_URL_VERSION'))) {
+	define('CFCT_URL_VERSION', '1.5');
+}
 
 /**
  * Load in assets at wp_enqueue_scripts hook
