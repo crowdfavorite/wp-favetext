@@ -21,9 +21,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<h1 class="entry-title full-title"><a href="<?php the_permalink() ?>" title="Permanent link to <?php the_title_attribute() ?>" rel="bookmark" rev="post-<?php the_ID(); ?>"><?php the_title() ?></a></h1>
 	<div class="entry-content full-content">
 <?php 
-		the_content('<span class="more-link">'.__('Continued...', 'carrington-text').'</span>'); 
+		the_content('<span class="more-link">'.__('Continued...', 'fave-text').'</span>'); 
 		$args = array(
-			'before' => '<p class="pages-link">'. __('Pages: ', 'carrington-text'),
+			'before' => '<p class="pages-link">'. __('Pages: ', 'fave-text'),
 			'after' => "</p>\n",
 			'next_or_number' => 'number'
 		);
@@ -32,18 +32,18 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 		<div class="clear"></div>
 	</div><!--/entry-content-->
 	<?php if (!is_singular()) { ?>
-		<p class="comments-link"><?php comments_popup_link(__('No Comments', 'carrington-text'), __('1 Comment', 'carrington-text'), __('% Comments', 'carrington-text')); ?></p>
+		<p class="comments-link"><?php comments_popup_link(__('No Comments', 'fave-text'), __('1 Comment', 'fave-text'), __('% Comments', 'fave-text')); ?></p>
 	<?php } ?>
 	<div id="post-comments-<?php the_ID(); ?>-target"></div>
-	<p class="filed categories"><?php printf(__('Categories: %s.', 'carrington-text'), get_the_category_list(', ')) ?></p>
-	<?php the_tags(__('<p class="filed tags">Tags: ', 'carrington-text'), ', ', '</p>'); ?>
+	<p class="filed categories"><?php printf(__('Categories: %s.', 'fave-text'), get_the_category_list(', ')) ?></p>
+	<?php the_tags(__('<p class="filed tags">Tags: ', 'fave-text'), ', ', '</p>'); ?>
 	<!--/filed-->
 	<div class="by-line">
-		<?php edit_post_link(__('Edit', 'carrington-text'), '<div class="entry-editlink">', '</div>'); ?>
+		<?php edit_post_link(__('Edit', 'fave-text'), '<div class="entry-editlink">', '</div>'); ?>
 		<address class="author vcard full-author">
 			<?php printf(__('<span class="by">By</span> %s', 'carrington-blog'), '<a class="url fn" href="'.get_author_posts_url(get_the_author_meta('ID')).'" title="View all posts by ' . esc_attr(get_the_author()) . '">'.get_the_author().'</a>') ?>
 		</address>
 		&mdash;
-		<span class="date full-date"><abbr class="published" title="<?php the_time('c'); ?>"><?php the_time('F j, Y'); __(' at ', 'carrington-text'); the_time(); ?></abbr></span>
+		<span class="date full-date"><abbr class="published" title="<?php the_time('c'); ?>"><?php the_time('F j, Y'); __(' at ', 'fave-text'); the_time(); ?></abbr></span>
 	</div><!--/by-line-->
 </div><!-- .post -->

@@ -29,7 +29,7 @@ extract($data); // for comment reply link
 if ($comment->comment_approved == '0') {
 
 ?>
-		<p class="notification"><strong><?php _e('(Your comment is awaiting moderation)', 'carrington-text'); ?></strong></p>
+		<p class="notification"><strong><?php _e('(Your comment is awaiting moderation)', 'fave-text'); ?></strong></p>
 <?php 
 
 }
@@ -42,7 +42,7 @@ comment_text();
 
 <?php
 
-edit_comment_link(__('Edit', 'carrington-text'), '<span class="comment-editlink">', '</span>');
+edit_comment_link(__('Edit', 'fave-text'), '<span class="comment-editlink">', '</span>');
 
 if (function_exists('get_avatar')) { 
 	echo get_avatar($comment, 25);

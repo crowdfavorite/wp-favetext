@@ -22,8 +22,8 @@ global $post, $wp_query, $comments, $comment;
 if (have_comments() || comments_open()) {
 ?>
 
-<a class="feed comment-feed" rel="alternate" href="<?php echo get_post_comments_feed_link($post->ID, ''); ?>"><?php _e('Comment Feed', 'carrington-text'); ?></a>
-<h2 id="comments" class="h1 comments-title"><?php comments_number(__('No Responses (yet)', 'carrington-text'), __('One Response', 'carrington-text'), __('% Responses', 'carrington-text')); ?></h2>
+<a class="feed comment-feed" rel="alternate" href="<?php echo get_post_comments_feed_link($post->ID, ''); ?>"><?php _e('Comment Feed', 'fave-text'); ?></a>
+<h2 id="comments" class="h1 comments-title"><?php comments_number(__('No Responses (yet)', 'fave-text'), __('One Response', 'fave-text'), __('% Responses', 'fave-text')); ?></h2>
 
 <?php 
 
@@ -50,7 +50,7 @@ if (have_comments() || comments_open()) {
 
 		if ($ping_count) {
 ?>
-<h3 class="pings"><?php _e('Continuing the Discussion', 'carrington-text'); ?></h3>
+<h3 class="pings"><?php _e('Continuing the Discussion', 'fave-text'); ?></h3>
 <?php
 			echo '<ol class="comments pings">', wp_list_comments('type=pings&callback=cfct_threaded_comment'), '</ol>';
 		}

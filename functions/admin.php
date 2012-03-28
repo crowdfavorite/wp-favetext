@@ -22,8 +22,8 @@ function cfct_blog_settings_form() {
 //	$color_options = '';
 	$lightbox_options = '';
 	$values = array(
-		'yes' => __('Yes', 'carrington-text'),
-		'no' => __('No', 'carrington-text'),
+		'yes' => __('Yes', 'fave-text'),
+		'no' => __('No', 'fave-text'),
 	);
 	$settings = array(
 		'cfct_ajax_load',
@@ -53,15 +53,15 @@ function cfct_blog_settings_form() {
 		<table class="form-table">
 			<tbody>
 				<tr valign="top">
-					<th scope="row">'.sprintf(__('Design', 'carrington-text'), $key).'</td>
+					<th scope="row">'.sprintf(__('Design', 'fave-text'), $key).'</td>
 					<td>
 						<fieldset>
 							<p>
-								<label for="cfct_custom_colors">'.__('Customize Colors:', 'carrington-text').'</label>
+								<label for="cfct_custom_colors">'.__('Customize Colors:', 'fave-text').'</label>
 								<select name="cfct_custom_colors" id="cfct_custom_colors">'.$cfct_custom_colors_options.'</select>
 							</p>
 							<fieldset class="'.$colors_class.'" id="cfct_color_options_panel">
-								<legend>'.__('Custom Colors', 'carrington-text').'</legend>
+								<legend>'.__('Custom Colors', 'fave-text').'</legend>
 	';
 	foreach ($cfct_color_options as $option => $default) {
 		$value = get_option($option);
@@ -73,7 +73,7 @@ function cfct_blog_settings_form() {
 		));
 		$html .= '
 								<p>
-									<label for="'.$option.'">'.__($label.':', 'carrington-text').'</label>
+									<label for="'.$option.'">'.__($label.':', 'fave-text').'</label>
 									#<input type="text" name="'.$option.'" id="'.$option.'" value="'.$value.'" size="6" maxlength="6" class="cfct_colorpicker" />
 								</p>
 		';
@@ -82,12 +82,12 @@ function cfct_blog_settings_form() {
 								<p class="submit">
 									<input type="hidden" name="cfct_header_image_type" id="cfct_header_image_type" value="dark" />
 									<input type="hidden" name="cfct_footer_image_type" id="cfct_footer_image_type" value="dark" />
-									<input id="reset_colors" type="reset" name="reset_button" value="'.__('Reset to Default Colors', 'carrington-text').'" />
-									<a href="#" id="preview_colors" class="thickbox button" title="'.__('Custom Color Preview - Remember to Save!', 'carrington-text').'">'.__('Preview', 'carrington-text').'</a>
+									<input id="reset_colors" type="reset" name="reset_button" value="'.__('Reset to Default Colors', 'fave-text').'" />
+									<a href="#" id="preview_colors" class="thickbox button" title="'.__('Custom Color Preview - Remember to Save!', 'fave-text').'">'.__('Preview', 'fave-text').'</a>
 								</p>
 							</fieldset>
 							<p>
-								<label for="cfct_custom_header_image">'.__('Customize Header Image:', 'carrington-text').'</label>
+								<label for="cfct_custom_header_image">'.__('Customize Header Image:', 'fave-text').'</label>
 								<select name="cfct_custom_header_image" id="cfct_custom_header_image">'.$cfct_custom_header_image_options.'</select>
 							</p>
 							<fieldset class="'.$header_image_class.'" id="cfct_header_image_panel">
@@ -103,11 +103,11 @@ function cfct_blog_settings_form() {
 		<table class="form-table">
 			<tbody>
 				<tr valign="top">
-					<th scope="row">'.sprintf(__('Behavior', 'carrington-text'), $key).'</td>
+					<th scope="row">'.sprintf(__('Behavior', 'fave-text'), $key).'</td>
 					<td>
 						<fieldset>
 							<p>
-								<label for="cfct_ajax_load">'.__('Load archives and comments with AJAX:', 'carrington-text').'</label>
+								<label for="cfct_ajax_load">'.__('Load archives and comments with AJAX:', 'fave-text').'</label>
 								<select name="cfct_ajax_load" id="cfct_ajax_load">'.$cfct_ajax_load_options.'</select>
 							</p>
 							<p>
@@ -115,7 +115,7 @@ function cfct_blog_settings_form() {
 								<select name="cfct_lightbox" id="cfct_lightbox">'.$cfct_lightbox_options.'</select>
 							</p>
 							<p>
-								<label for="cfct_posts_per_archive_page">'.__('Posts shown on archives pages:', 'carrington-text').'</label>
+								<label for="cfct_posts_per_archive_page">'.__('Posts shown on archives pages:', 'fave-text').'</label>
 								<input type="text" name="cfct_posts_per_archive_page" id="cfct_posts_per_archive_page" value="'.$cfct_posts_per_archive_page.'" size="3" />
 							</p>
 						</fieldset>

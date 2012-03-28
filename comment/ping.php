@@ -33,7 +33,7 @@ comment_text();
 
 <?php
 
-edit_comment_link(__('Edit', 'carrington-text'), '<span class="comment-editlink">', '</span>');
+edit_comment_link(__('Edit', 'fave-text'), '<span class="comment-editlink">', '</span>');
 
 echo '<span class="author">',comment_author_link(),'</span> &mdash; <a href="'.esc_url(get_comment_link( $comment->comment_ID )).'">',comment_date(),' @ ',comment_time(),'</a>';
 

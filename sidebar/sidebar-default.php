@@ -28,7 +28,7 @@ if (!empty($about_text)) {
 ?>
 	<div id="carrington-about" class="widget">
 		<div class="about">
-			<h2 class="title"><?php printf(__('About %s', 'carrington-text'), get_bloginfo('name')); ?></h2>
+			<h2 class="title"><?php printf(__('About %s', 'fave-text'), get_bloginfo('name')); ?></h2>
 <?php
 	echo $about_text;
 ?>
@@ -44,27 +44,27 @@ $post = $orig_post;
 if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Primary Sidebar') ) {
 ?>
 		<div class="widget">
-			<h2 class="title"><?php _e('Search', 'carrington-text'); ?></h2>
+			<h2 class="title"><?php _e('Search', 'fave-text'); ?></h2>
 			<?php cfct_form('search'); ?>
 		</div><!--.widget-->
 		<div class="widget">
-			<h2 class="title"><?php _e('Pages', 'carrington-text'); ?></h2>
+			<h2 class="title"><?php _e('Pages', 'fave-text'); ?></h2>
 			<ul>
 				<?php wp_list_pages('title_li='); ?>
 			</ul>
 		</div><!--.widget-->
 		<div class="widget">
-			<h2 class="title"><?php _e('Categories', 'carrington-text'); ?></h2>
+			<h2 class="title"><?php _e('Categories', 'fave-text'); ?></h2>
 			<ul>
 				<?php wp_list_categories(); ?>
 			</ul>
 		</div><!--.widget-->
 		<div class="widget">
-			<h2 class="title"><?php _e('Tags', 'carrington-text'); ?></h2>
+			<h2 class="title"><?php _e('Tags', 'fave-text'); ?></h2>
 			<?php wp_tag_cloud('smallest=10&largest=18&unit=px'); ?>
 		</div><!--.widget-->
 		<div class="widget">
-			<h2 class="title"><?php _e('Archives', 'carrington-text'); ?></h2>
+			<h2 class="title"><?php _e('Archives', 'fave-text'); ?></h2>
 			<ul>
 				<?php wp_get_archives(); ?>
 			</ul>

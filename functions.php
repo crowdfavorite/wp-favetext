@@ -16,7 +16,7 @@
 
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 
-load_theme_textdomain('carrington-text');
+load_theme_textdomain('fave-text');
 
 
 /**
@@ -238,7 +238,7 @@ class CFCT_OB_On_Action {
  * Usage: CFCT_Comment_Form::setup();
  */
 class CFCT_Comment_Form {
-	public static $i18n = 'carrington-text';
+	public static $i18n = 'fave-text';
 	protected static $instance;
 	protected static $hooks_attached = false;
 	
@@ -352,7 +352,7 @@ class CFCT_Comment_Form {
 			'title_reply' => __('Leave a Reply', self::$i18n),
 			'title_reply_to' => __('Leave a Reply to %s', self::$i18n),
 			'cancel_reply_link' => __('Cancel reply', self::$i18n),
-			'comment_notes_after' => '<em class="some-html-is-ok"><abbr title="'.$html_tags.'">'.__('Some HTML is OK', 'carrington-text').'</abbr></em>',
+			'comment_notes_after' => '<em class="some-html-is-ok"><abbr title="'.$html_tags.'">'.__('Some HTML is OK', 'fave-text').'</abbr></em>',
 			'comment_notes_before' => ''
 		);
 		return array_merge($default_args, $args);

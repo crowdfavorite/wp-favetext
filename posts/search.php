@@ -32,7 +32,7 @@ else {
 
 <div id="content">
 
-	<h1><?php printf(__('Search Results for: %s', 'carrington-text'), $search_title); ?></h1>
+	<h1><?php printf(__('Search Results for: %s', 'fave-text'), $search_title); ?></h1>
 
 <?php
 
