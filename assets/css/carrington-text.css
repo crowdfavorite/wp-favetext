@@ -360,14 +360,9 @@ hr.divider {
 #generator-link {
 	line-height: 30px;
 }
-#developer-link a, #footer p#developer-link a:visited {
-	background:url(../img/by-crowd-favorite.png) no-repeat;
+#developer-link {
 	display: block;
 	float:right;
-	height:30px;
-	overflow: hidden;
-	text-indent:-32697px;
-	width:270px;
 }
 a#TB_prev:hover {
 	background:url(../img/lightbox-left.png) no-repeat left center;

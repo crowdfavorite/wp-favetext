@@ -23,7 +23,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <?php
 if (cfct_get_option('cfct_credit') == 'yes') {
 ?>
-			<p id="developer-link"><?php printf(__('<a href="http://crowdfavorite.com/wordpress/themes/favetext/">%s</a> by <a href="http://crowdfavorite.com" title="Custom WordPress development, design and consulting services." rel="developer designer">%s</a>', 'carrington-text'), 'FaveText', 'Crowd Favorite'); ?></p>
+			<p id="developer-link"><?php printf(__('<a href="http://crowdfavorite.com/wordpress/themes/favetext/">%s</a> by <a href="http://crowdfavorite.com" title="Custom WordPress development, design and consulting services." rel="developer designer">%s</a>', 'fave-text'), 'FaveText', 'Crowd Favorite'); ?></p>
 <?php
 }
 ?>
