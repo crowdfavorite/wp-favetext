@@ -29,6 +29,6 @@ else {
 ?>
 
 <form method="get" action="<?php echo trailingslashit(get_bloginfo('url')); ?>" onsubmit="<?php echo $onsubmit; ?>">
-	<input type="text" id="s" name="s" value="<?php echo esc_attr(urldecode(get_search_query()))); ?>" size="15" />
+	<input type="text" id="s" name="s" value="<?php echo esc_attr(urldecode(get_search_query())); ?>" size="15" />
 	<input type="submit" name="submit_button" value="<?php _e('Search', 'fave-text'); ?>" />
 </form>
