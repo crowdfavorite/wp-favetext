@@ -31,7 +31,7 @@ global $post;
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	
-	<link rel="stylesheet" type="text/css" media="screen, print, handheld" href="<?php echo get_template_directory_uri() ?>/css/carrington-text.css" />
+	<link rel="stylesheet" type="text/css" media="screen, print, handheld" href="<?php echo get_template_directory_uri() ?>/css/fave-text.css" />
 	
 <?php
 	wp_head(); 

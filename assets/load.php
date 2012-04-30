@@ -13,7 +13,7 @@ wp_enqueue_script('jquery');
 wp_enqueue_script( 'comment-reply' );
 wp_enqueue_script(
 	'carrington',
-	CFCT_ASSETS_URL.'js/carrington-text.js',
+	CFCT_ASSETS_URL.'js/fave-text.js',
 	array('jquery'),
 	CFCT_URL_VERSION
 );

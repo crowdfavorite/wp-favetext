@@ -18,11 +18,11 @@
 define('ABSPATH', dirname(__FILE__) . '/');
 
 $css_files = array(
-	'carrington-text' => 'carrington-text.css',
+	'fave-text' => 'fave-text.css',
 );
 
 // set default
-$load = array('carrington-text');
+$load = array('fave-text');
 
 if (!isset($_GET['type'])) {
 	$_GET['type'] = 'main';
@@ -30,7 +30,7 @@ if (!isset($_GET['type'])) {
 
 switch ($_GET['type']) {
 	case 'noimg':
-		$load = array('typography', 'carrington-text');
+		$load = array('typography', 'fave-text');
 		break;
 	case 'main':
 	default:
