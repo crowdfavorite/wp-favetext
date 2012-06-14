@@ -65,7 +65,7 @@ function cfct_blog_settings_form() {
 	';
 	foreach ($cfct_color_options as $option => $default) {
 		$value = get_option($option);
-		$value == '' ? $value = $default : $value = attribute_escape($value);
+		$value == '' ? $value = $default : $value = esc_attr($value);
 		$label = ucwords(str_replace(
 			array('cfct_', '_'),
 			array('', ' '),
@@ -255,9 +255,8 @@ function cfct_blog_admin_css() {
 <link rel="stylesheet" type="text/css" media="screen" href="'.get_bloginfo('template_directory').'/carrington-core/lightbox/css/thickbox.css" />
 	';
 }
-if (is_admin() && $_GET['page'] == 'carrington-settings') {
+if (is_admin() && isset($_GET['page']) && $_GET['page'] == 'carrington-settings') {
 	add_action('admin_head', 'cfct_blog_admin_css');
 	wp_enqueue_script('cfct_thickbox', get_bloginfo('template_directory').'/carrington-core/lightbox/thickbox.js', array('jquery'), '1.0');
 }
 
-?>

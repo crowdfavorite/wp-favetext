@@ -66,16 +66,19 @@ function cfct_text_init() {
 	if (cfct_get_option('cfct_ajax_load') == 'yes') {
 		cfct_ajax_load();
 	}
-	if (cfct_get_option('cfct_lightbox') != 'no' && !is_admin()) {
-		wp_enqueue_script('cfct_thickbox', get_bloginfo('template_directory').'/carrington-core/lightbox/thickbox.js', array('jquery'), '1.0');
-// in the future we'll use this, but for now we want 2.5 compatibility
-//		wp_enqueue_style('jquery-lightbox', get_bloginfo('template_directory').'/carrington-core/lightbox/css/lightbox.css');
-	}
 }
 add_action('init', 'cfct_text_init');
 
-wp_enqueue_script('jquery');
-wp_enqueue_script('carrington-text', get_bloginfo('template_directory').'/js/carrington-text.js', array('jquery'), '1.0');
+function cfct_text_enqueue() {
+	wp_enqueue_script('jquery');
+	if (cfct_get_option('cfct_lightbox') != 'no' && !is_admin()) {
+		wp_enqueue_script('cfct_thickbox', get_bloginfo('template_directory').'/carrington-core/lightbox/thickbox.js', array('jquery'), '1.0');
+		// in the future we'll use this, but for now we want 2.5 compatibility
+		//		wp_enqueue_style('jquery-lightbox', get_bloginfo('template_directory').'/carrington-core/lightbox/css/lightbox.css');
+	}
+	wp_enqueue_script('carrington-text', get_bloginfo('template_directory').'/js/carrington-text.js', array('jquery'), '1.0');
+}
+add_action('wp_enqueue_styles', 'cfct_text_enqueue');
 
 // Filter comment reply link to work with namespaced comment-reply javascript.
 add_filter('cancel_comment_reply_link', 'cfct_get_cancel_comment_reply_link', 10, 3);
